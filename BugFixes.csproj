@@ -4,7 +4,7 @@
     <TargetFramework>netstandard2.0</TargetFramework>
     <AssemblyName>BugFixes</AssemblyName>
     <Product>Bug Fixes</Product>
-    <Version>1.0.1</Version>
+    <Version>1.1.0</Version>
     <AllowUnsafeBlocks>true</AllowUnsafeBlocks>
     <LangVersion>latest</LangVersion>
     <RestoreAdditionalProjectSources>
@@ -17,16 +17,20 @@
 
   <ItemGroup>
     <PackageReference Include="BepInEx.Analyzers" Version="1.*" PrivateAssets="all" />
+    <PackageReference Include="BepInEx.AssemblyPublicizer.MSBuild" Version="0.4.3">
+      <PrivateAssets>all</PrivateAssets>
+      <IncludeAssets>runtime; build; native; contentfiles; analyzers; buildtransitive</IncludeAssets>
+    </PackageReference>
     <PackageReference Include="BepInEx.Core" Version="5.*" />
     <PackageReference Include="BepInEx.PluginInfoProps" Version="2.*" />
     <PackageReference Include="UnityEngine.Modules" Version="2021.3.5" IncludeAssets="compile" />
   </ItemGroup>
 
   <ItemGroup>
-    <Reference Include="GH.Runtime">
+    <Reference Include="GH.Runtime" Publicize="true">
       <HintPath>$(HOME)/.steam/steamapps/common/Gloomhaven/GH_Data/Managed/GH.Runtime.dll</HintPath>
     </Reference>
-    <Reference Include="ScenarioRuleLibrary">
+    <Reference Include="ScenarioRuleLibrary" Publicize="true">
       <HintPath>$(HOME)/.steam/steamapps/common/Gloomhaven/GH_Data/Managed/ScenarioRuleLibrary.dll</HintPath>
     </Reference>
     <Reference Include="Unity.TextMeshPro">
