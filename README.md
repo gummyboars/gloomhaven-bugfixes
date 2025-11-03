@@ -16,3 +16,9 @@ If another player grants an extra turn to class #17, and the item is used after 
 
 ## Compatibility
 This mod must be installed for all players in a multiplayer game. If players without the mod attempt to join a game hosted by a player with the mod (or vice versa), they will get a game version error.
+
+## Other Mods
+You may be interested in other mods for Gloomhaven:
+- [Camera Tweaks](https://github.com/gummyboars/gloomhaven-camera)
+- [UI Tweaks](https://github.com/gummyboars/gloomhaven-uitweaks)
+- [Fast Load](https://github.com/gummyboars/gloomhaven-fastload)
