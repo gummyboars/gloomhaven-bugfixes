@@ -8,6 +8,8 @@ using BepInEx.Logging;
 using HarmonyLib;
 using HarmonyLib.Tools;
 
+using TMPro;
+
 using FFSNet;
 using ScenarioRuleLibrary;
 
@@ -16,9 +18,9 @@ namespace BugFixes;
 [BepInPlugin(pluginGUID, pluginName, pluginVersion)]
 public class BugFixesPlugin : BaseUnityPlugin
 {
-    const string pluginGUID = "com.gummyboars.gloomhaven.bugfixes";
-    const string pluginName = "Bug Fixes";
-    const string pluginVersion = "1.0.0";
+    public const string pluginGUID = "com.gummyboars.gloomhaven.bugfixes";
+    public const string pluginName = "Bug Fixes";
+    public const string pluginVersion = "1.0.1";
 
     private Harmony HarmonyInstance = null;
 
@@ -40,6 +42,15 @@ public class BugFixesPlugin : BaseUnityPlugin
         {
             BugFixesPlugin.logger.LogError($"Could not load plugin {pluginName}: {e}");
         }
+    }
+}
+
+[HarmonyPatch(typeof(MF), "SetVersion")]
+public static class Patch_ShowVersion
+{
+    public static void Postfix(TextMeshProUGUI version)
+    {
+        version.text += " (Bug Fixes " + BugFixesPlugin.pluginVersion + ")";
     }
 }
 
