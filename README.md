@@ -1,7 +1,9 @@
 # Gloomhaven Bug Fixes
-This mod currently only fixes bugs for item number 150 (solo scenario campaign item for class #17).
-
-This mod has been very lightly tested - using the item for either the top action or bottom action, and using the item either after playing the first card or the second card.
+This mod currently fixes a small number of bugs
+- Fixes a crash at end of turn when using item number 150 (solo scenario campaign item for class #17)
+- Fixes a bug that would cause modded save files to be named incorrectly and "disappear"
+- Fixes a crash that would happen if a summon tried to summon
+- Enables the debug menu when started with `-debug`
 
 ## Known Issues
 If another player grants an extra turn to class #17, and the item is used after using the action from one card (as opposed to both cards), the game will still crash.
