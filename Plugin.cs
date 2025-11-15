@@ -20,7 +20,7 @@ public class BugFixesPlugin : BaseUnityPlugin
 {
     public const string pluginGUID = "com.gummyboars.gloomhaven.bugfixes";
     public const string pluginName = "Bug Fixes";
-    public const string pluginVersion = "2.0.0";
+    public const string pluginVersion = "3.0.0";
 
     private Harmony HarmonyInstance = null;
 
