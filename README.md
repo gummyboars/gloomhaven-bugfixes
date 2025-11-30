@@ -3,6 +3,7 @@ This mod currently fixes a small number of bugs
 - Fixes a crash at end of turn when using item number 150 (solo scenario campaign item for class #17)
 - Fixes a bug with choosing not to use the ability from a level 9 card for the sun class
 - Fixes a multiplayer-only bug with action selection in scenario 81
+- Fixes a bug where achievements in guildmaster mode would not be counted correctly
 - Fixes a bug that would cause modded save files to be named incorrectly and "disappear"
 - Fixes a crash that would happen if a summon tried to summon
 - Enables the debug menu when started with `-debug`
