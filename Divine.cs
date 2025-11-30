@@ -4,6 +4,7 @@ using HarmonyLib;
 
 using ScenarioRuleLibrary;
 
+namespace BugFixes;
 
 // When OnPreventDamageTriggered happens, only PreventandApplytoActiveBonusCaster if it is toggled.  Fixes Divine Intervention applying at wrong time
 [HarmonyPatch(typeof(CPreventDamageActiveBonus_PreventAndApplyToActiveBonusCaster), "OnPreventDamageTriggered")]

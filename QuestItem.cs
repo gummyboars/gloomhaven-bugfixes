@@ -4,6 +4,7 @@ using HarmonyLib;
 
 using ScenarioRuleLibrary;
 
+namespace BugFixes;
 
 // IsItemInteracable tries to access this.actor, so this.actor has to be set first otherwise crashes with null error
 [HarmonyPatch(typeof(UIUseItemsBar), "ShowUsableItems")]
